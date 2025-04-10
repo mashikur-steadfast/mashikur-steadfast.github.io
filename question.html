@@ -1,0 +1,680 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>দাঁড়িকমা - স্মার্ট প্রশ্নব্যাংক</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <style>
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+        .swiper-pagination-bullet-active {
+            background-color: #2563eb !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">D</div>
+                <span class="text-xl font-bold text-blue-600">দাঁড়িকমা</span>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#features" class="font-medium hover:text-blue-600">সুবিধাসমূহ</a>
+                <a href="#how-it-works" class="font-medium hover:text-blue-600">কিভাবে কাজ করে</a>
+                <a href="#testimonials" class="font-medium hover:text-blue-600">মতামত</a>
+                <a href="#pricing" class="font-medium hover:text-blue-600">প্যাকেজ</a>
+                <a href="#faq" class="font-medium hover:text-blue-600">প্রশ্নোত্তর</a>
+                <a href="#contact" class="font-medium hover:text-blue-600">যোগাযোগ</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-md">
+            <a href="#features" class="block py-2 hover:text-blue-600">সুবিধাসমূহ</a>
+            <a href="#how-it-works" class="block py-2 hover:text-blue-600">কিভাবে কাজ করে</a>
+            <a href="#testimonials" class="block py-2 hover:text-blue-600">মতামত</a>
+            <a href="#pricing" class="block py-2 hover:text-blue-600">প্যাকেজ</a>
+            <a href="#faq" class="block py-2 hover:text-blue-600">প্রশ্নোত্তর</a>
+            <a href="#contact" class="block py-2 hover:text-blue-600">যোগাযোগ</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-600 text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">দেশের প্রথম এবং একমাত্র পেপারলেস স্মার্ট প্রশ্নব্যাংক!</h1>
+                <p class="text-lg md:text-xl mb-8">সকল পরীক্ষার প্রশ্নব্যাংক, টেস্টপেপার, আনলিমিটেড পরীক্ষা, প্রশ্ন ও অনলাইন পরীক্ষা তৈরী!</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition">ফ্রি-তে প্রশ্নব্যাংক দেখুন</button>
+                    <button class="bg-blue-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-800 transition">প্রশ্ন তৈরি করুন</button>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <div class="relative rounded-xl overflow-hidden shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Students learning" class="w-full h-auto">
+                    <div class="absolute inset-0 bg-blue-600 opacity-20"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Demo Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">দেখুন দাঁড়িকমা কিভাবে কাজ করে</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-8">আমাদের প্ল্যাটফর্ম সম্পর্কে বিস্তারিত জানতে এই ভিডিওটি দেখুন</p>
+            <div class="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-lg">
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe class="w-full h-64 md:h-96" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">পেপারলেস স্মার্ট প্রশ্নব্যাংকে শিক্ষার্থীরা যা যা পাচ্ছে</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">আমাদের প্ল্যাটফর্মে থাকা বিশেষ সুবিধাগুলো দেখে নিন</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">ভর্তি পরীক্ষার প্রশ্নব্যাংক</h3>
+                    <p class="text-gray-600">ইঞ্জিনিয়ারিং, মেডিকেল, গুচ্ছ সহ সকল বিশ্ববিদ্যালয়ের সব ধরণের ভর্তি পরীক্ষার প্রশ্নব্যাংক ও ব্যাখ্যাসহ সমাধান</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">পরীক্ষা ও মূল্যায়ন</h3>
+                    <p class="text-gray-600">নিজে নিজে আনলিমিটেড পরীক্ষা দেয়ার ব্যবস্থা এবং স্বয়ংক্রিয় মূল্যায়ন</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">বোর্ড ও টেস্ট পরীক্ষার প্রশ্নব্যাংক</h3>
+                    <p class="text-gray-600">সকল বোর্ড এবং স্কুল/কলেজের টেস্ট পরীক্ষার প্রশ্নব্যাংক ও ব্যাখ্যাসহ সমাধান</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">সীমাহীন প্রশ্নের ভান্ডার</h3>
+                    <p class="text-gray-600">২ লক্ষাধিক প্রশ্নের সাথে আমাদের অভিজ্ঞ টিম প্রতিদিন ১০০০+ নতুন প্রশ্ন যুক্ত করছে</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">নতুন প্রশ্ন সবার আগে</h3>
+                    <p class="text-gray-600">বছরজুড়ে কোনো পরীক্ষা হলেই দ্রুত সময়ের মধ্যে নতুন প্রশ্ন ব্যাখ্যাসহ যুক্ত হয়ে যায়</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">শিক্ষকদের জন্য বিশেষ সুবিধা</h3>
+                    <p class="text-gray-600">প্রশ্ন তৈরি, পরীক্ষা নেওয়া এবং ফলাফল বিশ্লেষণের সম্পূর্ণ সমাধান</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">দাঁড়িকমা কিভাবে ব্যবহার করবেন</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">মাত্র কয়েকটি সহজ ধাপে শুরু করুন আপনার ডিজিটাল লার্নিং জার্নি</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600 font-bold text-xl">১</div>
+                    <h3 class="text-xl font-semibold mb-2">একাউন্ট তৈরি করুন</h3>
+                    <p class="text-gray-600">মোবাইল নম্বর বা ইমেইল দিয়ে রেজিস্ট্রেশন করুন</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600 font-bold text-xl">২</div>
+                    <h3 class="text-xl font-semibold mb-2">আপনার ক্লাস/বিষয় সিলেক্ট করুন</h3>
+                    <p class="text-gray-600">আপনার প্রয়োজন অনুযায়ী ক্লাস ও বিষয় নির্বাচন করুন</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600 font-bold text-xl">৩</div>
+                    <h3 class="text-xl font-semibold mb-2">প্রশ্নব্যাংক এক্সেস করুন</h3>
+                    <p class="text-gray-600">হাজার হাজার প্রশ্ন ও সমাধান একসেস করুন</p>
+                </div>
+            </div>
+
+            <div class="mt-12 max-w-4xl mx-auto rounded-xl overflow-hidden shadow-lg">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Students using Darikomma" class="w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-blue-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <h3 class="text-4xl font-bold mb-2">১১১+</h3>
+                    <p class="text-blue-100">বিষয়</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-bold mb-2">৪৬,৯৮১+</h3>
+                    <p class="text-blue-100">শিক্ষার্থী</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-bold mb-2">২৩,২৭২+</h3>
+                    <p class="text-blue-100">শিক্ষক</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-bold mb-2">২,০০,০০০+</h3>
+                    <p class="text-blue-100">প্রশ্ন</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center">দেখে নিন কি বলছেন দাঁড়িকমা ব্যবহারকারীরা</h2>
+            
+            <!-- Slider main container -->
+            <div class="swiper testimonial-slider">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper pb-12">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="bg-white p-8 rounded-lg shadow-sm max-w-2xl mx-auto">
+                            <p class="text-gray-600 mb-6">"গ্রেট এপস, একজন শিক্ষার্থীর জন্য কত বড় উপকার, সেটা ডাউনলোড না করলে বুঝবে না। গরিব ছাত্রদের আর হাজার হাজার টাকার গাইড কেনা লাগবে না। ভালোবাসা রইলো দাঁড়িকমার প্রতি।"</p>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full mr-4 flex items-center justify-center text-blue-600 font-bold">M</div>
+                                <div>
+                                    <h4 class="font-medium">Minhajul Islam Minhaj</h4>
+                                    <p class="text-gray-500 text-sm">শিক্ষার্থী, ঢাকা কলেজ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="bg-white p-8 rounded-lg shadow-sm max-w-2xl mx-auto">
+                            <p class="text-gray-600 mb-6">"আমি অনেক বছর যাবৎ পড়াই, আমার মনে হয় আপনাদের প্রশ্ন তৈরির ফিচারটি ভালো করবে । প্রশ্ন তৈরির পাশাপাশি অটোম্যাটেড উত্তর পাওয়া যাচ্ছে। সবকিছু ঠিকঠাক থাকলে এই প্লাটফর্ম খুব ভালো করবে।"</p>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full mr-4 flex items-center justify-center text-blue-600 font-bold">H</div>
+                                <div>
+                                    <h4 class="font-medium">Hridoy Sir</h4>
+                                    <p class="text-gray-500 text-sm">গণিত শিক্ষক</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="bg-white p-8 rounded-lg shadow-sm max-w-2xl mx-auto">
+                            <p class="text-gray-600 mb-6">"সত্যি বলতে আমি এই রকম ( প্রশ্ন তৈরি ফিচার ) কিছু একটা অনেক দিন থেকে খুজছিলাম। এবং আপনি নিজেও জানেন এই ফিচারটি পাবলিশ হওয়ার অপেক্ষায় আমি ছিলাম। হ্যাঁ ফিচারটি ব্যবহার করে শিক্ষকরা অনেক উপকৃত হবে।"</p>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full mr-4 flex items-center justify-center text-blue-600 font-bold">A</div>
+                                <div>
+                                    <h4 class="font-medium">Ajit Sen Sir</h4>
+                                    <p class="text-gray-500 text-sm">পদার্থবিজ্ঞান শিক্ষক</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">আমাদের প্যাকেজ সমূহ</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">আপনার প্রয়োজন অনুযায়ী প্যাকেজ সিলেক্ট করুন</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Free Plan -->
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition">
+                    <h3 class="text-xl font-semibold mb-2">ফ্রি</h3>
+                    <p class="text-gray-600 mb-4">মৌলিক সুবিধাসমূহ</p>
+                    <div class="mb-6">
+                        <span class="text-3xl font-bold">০</span>
+                        <span class="text-gray-500">টাকা/মাস</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            বোর্ড পরীক্ষার প্রশ্ন ও সমাধান
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            টেস্ট পরীক্ষার প্রশ্ন ও সমাধান
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            ভর্তি পরীক্ষার প্রশ্ন
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-100 text-gray-800 py-2 rounded-lg font-medium hover:bg-gray-200 transition">বর্তমানে সক্রিয়</button>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="border-2 border-blue-500 rounded-lg p-6 hover:shadow-lg transition transform hover:-translate-y-1">
+                    <div class="bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">সবচেয়ে জনপ্রিয়</div>
+                    <h3 class="text-xl font-semibold mb-2">প্রিমিয়াম</h3>
+                    <p class="text-gray-600 mb-4">সম্পূর্ণ সুবিধাসমূহ</p>
+                    <div class="mb-6">
+                        <span class="text-3xl font-bold">২৯৯</span>
+                        <span class="text-gray-500">টাকা/মাস</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            সকল ফ্রি সুবিধা
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            আনলিমিটেড পরীক্ষা
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            প্রিমিয়াম প্রশ্নব্যাংক
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            অফলাইন এক্সেস
+                        </li>
+                    </ul>
+                    <button class="w-full bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition">সাবস্ক্রাইব করুন</button>
+                </div>
+
+                <!-- Teacher Plan -->
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition">
+                    <h3 class="text-xl font-semibold mb-2">শিক্ষক</h3>
+                    <p class="text-gray-600 mb-4">শিক্ষকদের জন্য বিশেষ প্যাকেজ</p>
+                    <div class="mb-6">
+                        <span class="text-3xl font-bold">৫৯৯</span>
+                        <span class="text-gray-500">টাকা/মাস</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            সকল প্রিমিয়াম সুবিধা
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            প্রশ্ন তৈরি টুলস
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            পরীক্ষা তৈরি ও মূল্যায়ন
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            স্টুডেন্ট ম্যানেজমেন্ট
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-800 text-white py-2 rounded-lg font-medium hover:bg-gray-900 transition">সাবস্ক্রাইব করুন</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center">কোন জিজ্ঞাসা?</h2>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="mb-4 border-b border-gray-200 pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-medium">
+                        <span>দাঁড়িকমা-তে জয়েন করতে কি টাকা লাগে?</span>
+                        <svg class="w-5 h-5 text-blue-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer mt-2 text-gray-600 hidden">
+                        <p>না, দাঁড়িকমাতে বেসিক একাউন্ট তৈরি সম্পূর্ণ ফ্রি। আপনি ফ্রি একাউন্ট দিয়ে আমাদের বেসিক সুবিধাগুলো ব্যবহার করতে পারবেন। প্রিমিয়াম ফিচার ব্যবহার করতে চাইলে সাবস্ক্রিপশন নিতে হবে।</p>
+                    </div>
+                </div>
+                
+                <div class="mb-4 border-b border-gray-200 pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-medium">
+                        <span>দাঁড়িকমা শিক্ষক না শিক্ষার্থীদের জন্য?</span>
+                        <svg class="w-5 h-5 text-blue-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer mt-2 text-gray-600 hidden">
+                        <p>দাঁড়িকমা শিক্ষক এবং শিক্ষার্থী উভয়ের জন্যই তৈরি করা হয়েছে। শিক্ষার্থীরা এখানে প্রশ্নব্যাংক থেকে পড়াশোনা করতে পারবে এবং পরীক্ষা দিতে পারবে। শিক্ষকরা প্রশ্ন তৈরি করতে পারবেন, পরীক্ষা নিতে পারবেন এবং শিক্ষার্থীদের ফলাফল বিশ্লেষণ করতে পারবেন।</p>
+                    </div>
+                </div>
+                
+                <div class="mb-4 border-b border-gray-200 pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-medium">
+                        <span>দাঁড়িকমা-তে কি কি সার্ভিস আছে?</span>
+                        <svg class="w-5 h-5 text-blue-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer mt-2 text-gray-600 hidden">
+                        <p>দাঁড়িকমাতে রয়েছে প্রশ্নব্যাংক, অনলাইন পরীক্ষা, প্রশ্ন তৈরি টুলস, স্বয়ংক্রিয় মূল্যায়ন, ফলাফল বিশ্লেষণ এবং আরও অনেক সুবিধা। আমাদের প্ল্যাটফর্মে ২ লক্ষাধিক প্রশ্নের বিশাল ভান্ডার রয়েছে যা নিয়মিত আপডেট করা হয়।</p>
+                    </div>
+                </div>
+
+                <div class="mb-4 border-b border-gray-200 pb-4">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-medium">
+                        <span>প্রশ্ন কিভাবে তৈরী করবো?</span>
+                        <svg class="w-5 h-5 text-blue-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer mt-2 text-gray-600 hidden">
+                        <p>প্রশ্ন তৈরি করতে আপনাকে প্রথমে শিক্ষক একাউন্টে লগ ইন করতে হবে। তারপর "প্রশ্ন তৈরি" অপশনে গিয়ে আপনি নতুন প্রশ্ন যোগ করতে পারবেন। আমাদের ইন্টারফেস খুবই সহজবোধ্য - MCQ, CQ বা যে কোন ধরনের প্রশ্ন আপনি খুব সহজেই তৈরি করতে পারবেন।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6">আজই শুরু করুন আপনার ডিজিটাল লার্নিং এক্সপেরিয়েন্স</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">হাজার হাজার প্রশ্ন ও সমাধান নিয়ে দাঁড়িকমা আপনার জন্য প্রস্তুত</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition">ফ্রি একাউন্ট তৈরি করুন</button>
+                <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition">ডেমো দেখুন</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4">আমাদের সাথে যোগাযোগ করুন</h2>
+                    <p class="text-gray-600 mb-6">আপনার কোন প্রশ্ন বা পরামর্শ থাকলে আমাদের জানাতে পারেন। আমরা যত দ্রুত সম্ভব আপনার সাথে যোগাযোগ করবো।</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">ফোন</h4>
+                                <p class="text-gray-600">01329637000</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">ইমেইল</h4>
+                                <p class="text-gray-600">info.daricomma@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">ঠিকানা</h4>
+                                <p class="text-gray-600">ধানমন্ডি, ঢাকা, বাংলাদেশ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-6">মেসেজ পাঠান</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 mb-2">আপনার নাম</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 mb-2">ইমেইল</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 mb-2">মেসেজ</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition">পাঠান</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">D</div>
+                        <span class="text-lg font-bold">দাঁড়িকমা</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">প্রশ্নব্যাংক, বইপত্র, প্রশ্ন-তৈরী, পরীক্ষা দেয়া ও নেয়া সহ সকল শিক্ষা উপকরণ দাঁড়িকমায় শতভাগ ডিজিটাল!</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">কোম্পানি</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">আমাদের সম্পর্কে</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">ক্যারিয়ার</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">ব্লগ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">প্রাইভেসি পলিসি</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">টার্মস এবং কন্ডিশন</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">লিংক</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">প্রশ্নব্যাংক</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">মডেল টেস্ট</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">সেলফ টেস্ট</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">ভর্তি পরীক্ষা</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">শিক্ষক কর্ণার</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">যোগাযোগ</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <span>01329637000</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span>info.daricomma@gmail.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span>ধানমন্ডি, ঢাকা, বাংলাদেশ</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>স্বত্ব © ২০২৩ দাঁড়িকমা লিঃ কর্তৃক সর্বস্বত্ব সংরক্ষিত</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('svg');
+                
+                // Toggle answer visibility
+                answer.classList.toggle('hidden');
+                
+                // Rotate icon
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Initialize Swiper
+        const swiper = new Swiper('.testimonial-slider', {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
